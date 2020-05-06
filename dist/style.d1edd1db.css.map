@@ -1,0 +1,1 @@
+{"version":3,"sources":["../css/style.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"style.d1edd1db.css","sourceRoot":"../src","sourcesContent":["html {\n  margin: auto;\n  padding: 9px;\n  background-color: 0; }\n  html body {\n    background-color: red;\n    background-color: 0; }\n"]}

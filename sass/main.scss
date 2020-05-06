@@ -1,4 +1,9 @@
-html{
-    margin: auto;
-    padding: 2px;
+html {
+  margin: auto;
+  padding: 9px;
+  background-color: green($color: #000000);
+  body {
+    background-color: red;
+    background-color: blue($color: #000000);
+  }
 }
