@@ -1,7 +1,21 @@
+@import url(../node_modules/sans-serif/css/sans-serif.css);
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
 html {
-  margin: auto;
-  padding: 9px;
-  background-color: 0; }
-  html body {
-    background-color: red;
-    background-color: 0; }
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  color: #1a1212;
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: 2rem; }
+
+html div p {
+  font-family: "Nunito", sans-serif; }

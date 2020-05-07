@@ -1,9 +1,14 @@
-html {
-  margin: auto;
-  padding: 9px;
-  background-color: green($color: #000000);
-  body {
-    background-color: red;
-    background-color: blue($color: #000000);
+@import './_abstract.scss/functions', './_abstract.scss/mixins',"./_abstract.scss/variables" ; 
+@import './base/animations','./base/typography',"./base/base","./base/utilities";
+@import "../node_modules/sans-serif/css/sans-serif.css";
+
+
+
+html{
+  div{
+    p{
+      font-family: $font-primary;
+    }
   }
 }
+
