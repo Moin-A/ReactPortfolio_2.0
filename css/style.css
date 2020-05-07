@@ -1,4 +1,5 @@
 @import url(../node_modules/sans-serif/css/sans-serif.css);
+@import url(../node_modules/@fortawesome/fontawesome-free/css/all.css);
 *,
 *::before,
 *::after {
@@ -16,6 +17,17 @@ body {
   font-weight: 300;
   line-height: 1.6;
   font-size: 2rem; }
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh;
+  overflow: hidden; }
+
+.main-nav {
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr; }
+  .main-nav img {
+    height: 80px; }
 
 html div p {
   font-family: "Nunito", sans-serif; }
