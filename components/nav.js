@@ -8,13 +8,13 @@ const Nav = () => {
 
             <div>
                 <a href="https://facebook.com">
-                    <i className={'fa-2x fab fa-facebook-square'}></i>
+                    <i className={'fa-3x fab fa-facebook-square'}></i>
                 </a>
                 <a href="https://facebook.com">
-                    <i className={'fa-2x fab fa-twitter-square'}></i>
+                    <i className={'fa-3x fab fa-twitter-square'}></i>
                 </a>
                 <a href="https://facebook.com">
-                    <i className={'fa-2x fab fa-youtube-square'}></i>
+                    <i className={'fa-3x fab fa-youtube-square'}></i>
                 </a>
             </div>
             <ul>
