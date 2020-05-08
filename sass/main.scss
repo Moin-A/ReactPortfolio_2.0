@@ -5,11 +5,3 @@
 @import './_layout.scss/layout.scss';
 @import '../node_modules/sans-serif/css/sans-serif.css';
 @import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
-
-html {
-    div {
-        p {
-            font-family: $font-primary;
-        }
-    }
-}

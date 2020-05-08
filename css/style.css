@@ -10,6 +10,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Josefin Sans", sans-serif;
@@ -20,14 +23,40 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh;
-  overflow: hidden; }
+  grid-template-rows: max-content;
+  grid-template-columns: [column-start left-margin-start] 1fr [left-margin-end centre-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [centre-end] 1fr [column-end]; }
+
+ul {
+  list-style: none; }
 
 .main-nav {
   display: grid;
-  grid-template-columns: 3fr 2fr 1fr; }
+  grid-column: column-start/column-end;
+  align-items: center;
+  background-color: #1a1212; }
   .main-nav img {
-    height: 80px; }
-
-html div p {
-  font-family: "Nunito", sans-serif; }
+    grid-column: col-start 1 / col-end 2;
+    max-height: 8rem;
+    width: auto; }
+    @media only screen and (max-width: 25em) {
+      .main-nav img {
+        max-height: 6rem; } }
+  .main-nav div {
+    grid-column: col-start 6 / col-end 6; }
+    @media only screen and (max-width: 25em) {
+      .main-nav div {
+        grid-column: col-start 3 / col-end 4; } }
+  .main-nav ul {
+    display: grid;
+    grid-column: col-start 8 / col-end 9;
+    grid-template-columns: 1fr 1fr; }
+    @media only screen and (max-width: 25em) {
+      .main-nav ul {
+        grid-column: col-start 4 / col-end 9; } }
+    .main-nav ul li a {
+      text-decoration: none;
+      padding: 0.75rem;
+      font-weight: bold;
+      color: #eae4e1; }
+      .main-nav ul li a:hover {
+        background: rgba(233, 219, 219, 0.445); }

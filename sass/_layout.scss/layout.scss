@@ -1,8 +1,38 @@
 .main-nav {
     display: grid;
-    grid-template-columns: 3fr 2fr 1fr;
+    grid-column: column-start/column-end;
+    align-items: center;
+    background-color: $color-grey-dark-2;
 
     img {
-        height: 80px;
+        grid-column: col-start 1 / col-end 2;
+        max-height: 8rem;
+        width: auto;
+        @media only screen and(max-width:$bp-smallest) {
+            max-height: 6rem;
+        }
+    }
+    div {
+        grid-column: col-start 6 / col-end 6;
+        @media only screen and(max-width:$bp-smallest) {
+            grid-column: col-start 3 / col-end 4;
+        }
+    }
+    ul {
+        display: grid;
+        grid-column: col-start 8 / col-end 9;
+        grid-template-columns: 1fr 1fr;
+        @media only screen and(max-width:$bp-smallest) {
+            grid-column: col-start 4 / col-end 9;
+        }
+        li a {
+            text-decoration: none;
+            padding: 0.75rem;
+            font-weight: bold;
+            &:hover {
+                background: $color-grey-light-1;
+            }
+            color: rgb(234, 228, 225);
+        }
     }
 }

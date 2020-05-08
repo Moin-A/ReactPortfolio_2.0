@@ -4,18 +4,17 @@ const plane = require('../src/img/moin.png')
 const Nav = () => {
     return (
         <nav className={'main-nav'}>
-            <div>
-                <img src={plane} alt="name" />
-            </div>
+            <img src={plane} alt="name" />
+
             <div>
                 <a href="https://facebook.com">
-                    <i className={'fab fa-facebook-square'}></i>
+                    <i className={'fa-2x fab fa-facebook-square'}></i>
                 </a>
                 <a href="https://facebook.com">
-                    <i className={'fab fa-twitter-square'}></i>
+                    <i className={'fa-2x fab fa-twitter-square'}></i>
                 </a>
                 <a href="https://facebook.com">
-                    <i className={'fab fa-youtube-square'}></i>
+                    <i className={'fa-2x fab fa-youtube-square'}></i>
                 </a>
             </div>
             <ul>
