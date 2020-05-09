@@ -1,4 +1,5 @@
 @import url(../node_modules/sans-serif/css/sans-serif.css);
+@import url(../node_modules/@fortawesome/fontawesome-free/css/all.css);
 *,
 *::before,
 *::after {
@@ -9,13 +10,74 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Josefin Sans", sans-serif;
-  color: #1a1212;
+  color: rgba(59, 10, 10, 0.445);
   font-weight: 300;
   line-height: 1.6;
   font-size: 2rem; }
 
-html div p {
-  font-family: "Nunito", sans-serif; }
+.container {
+  display: grid;
+  position: relative;
+  grid-template-rows: max-content;
+  grid-template-columns: [column-start left-margin-start] 1fr [left-margin-end centre-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [centre-end] 1fr [column-end]; }
+
+ul {
+  list-style: none; }
+
+.main-nav {
+  display: grid;
+  grid-column: column-start/column-end;
+  align-items: center; }
+  .main-nav::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #b5a497;
+    z-index: -1;
+    opacity: 0.2; }
+  .main-nav::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: url("http://www.dummyimage.com/300x300/000/fff&text=parent+image");
+    z-index: 11; }
+  .main-nav img {
+    grid-column: col-start 1 / col-end 2;
+    max-height: 8rem;
+    width: auto; }
+    @media only screen and (max-width: 25em) {
+      .main-nav img {
+        max-height: 6rem; } }
+  .main-nav div {
+    grid-column: col-start 6 / col-end 6; }
+    @media only screen and (max-width: 25em) {
+      .main-nav div {
+        grid-column: col-start 3 / col-end 4; } }
+  .main-nav ul {
+    display: grid;
+    grid-column: col-start 8 / col-end 9;
+    grid-template-columns: 1fr 1fr; }
+    @media only screen and (max-width: 25em) {
+      .main-nav ul {
+        grid-column: col-start 4 / col-end 9; } }
+    .main-nav ul li a {
+      text-decoration: none;
+      padding: 0.75rem;
+      font-weight: bold;
+      color: #6d482c; }
+      .main-nav ul li a:hover {
+        background: rgba(233, 219, 219, 0.445); }
+
+.fab {
+  margin-right: 1rem;
+  color: #ff7103; }

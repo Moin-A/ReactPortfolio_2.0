@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { render } from 'react-dom'
+import Nav from './Nav'
 
-export default function App() {
-    return React.createElement(
-        'div',
-        {},
-        React.createElement('p', {}, 'This is a text')
+const App = () => {
+    const [animal, setanimal] = useState('null')
+
+    return (
+        <div className={'container'}>
+            <Nav />
+        </div>
     )
 }
 

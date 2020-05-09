@@ -2,10 +2,11 @@
 // FONT VARIABLES
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
-$color-grey-dark-2:rgb(26, 18, 18);
-
-
-
+$color-grey-dark-2: rgb(26, 18, 18);
+$color-grey-dark-3: rgba(59, 10, 10, 0.445);
+$color-grey-light-1: rgba(233, 219, 219, 0.445);
+$bp-largest: 75em;
+$bp-smallest: 25em;
 *,
 *::before,
 *::after {
@@ -15,18 +16,33 @@ $color-grey-dark-2:rgb(26, 18, 18);
 }
 
 html {
-
     box-sizing: border-box;
     font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
-
-  
-    
+    @media only screen and(max-width:$bp-largest) {
+        font-size: 50%;
+    }
 }
 
 body {
     font-family: $font-display;
-    color: $color-grey-dark-2;
+    color: $color-grey-dark-3;
     font-weight: 300;
     line-height: 1.6;
-    font-size: 2rem ;
+    font-size: 2rem;
+}
+
+.container {
+    display: grid;
+    position: relative;
+    grid-template-rows: max-content;
+    grid-template-columns:
+        [column-start left-margin-start]1fr[left-margin-end centre-start]repeat(
+            8,
+            [col-start] minmax(min-content, 14rem) [col-end]
+        )
+        [centre-end]1fr[column-end];
+}
+
+ul {
+    list-style: none;
 }
