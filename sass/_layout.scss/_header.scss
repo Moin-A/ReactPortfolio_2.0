@@ -1,0 +1,26 @@
+.header {
+    display: grid;
+    position: relative;
+    padding: 3rem;
+    grid-column: column-start/column-end;
+    height: 20rem;
+    background-color: rgb(211, 197, 197);
+
+    &:before {
+        content: ' ';
+        position: absolute;
+        z-index: 1;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border-bottom: 9px double #dbd2cc;
+        border-top: 9px double #dbd2cc;
+    }
+    // border-bottom: .25rem doublesolid #141414;
+
+    img {
+        max-height: 4rem;
+        font-weight: bold;
+    }
+}
